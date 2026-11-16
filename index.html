@@ -222,12 +222,19 @@
     .profile-wrap::after {
       position: absolute;
       z-index: 2;
-      top: 12px;
-      right: -20px;
-      color: #f3a8c3;
-      font-size: 1.35rem;
-      content: "✦";
-      animation: twinkle 1.8s ease-in-out infinite;
+      top: 0;
+      right: -7px;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      background: #fff0f7;
+      box-shadow: 0 4px 12px rgba(80, 123, 155, .2);
+      content: "🐰";
+      font-size: 1.45rem;
+      animation: stickerWiggle 2s ease-in-out infinite;
     }
 
     .sparkle-line {
@@ -275,6 +282,10 @@
     }
 
     @keyframes ringSpin { to { transform: rotate(360deg); } }
+    @keyframes stickerWiggle {
+      0%, 100% { transform: rotate(-8deg) translateY(0); }
+      50% { transform: rotate(9deg) translateY(-4px); }
+    }
     @keyframes avatarFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-6px); }
@@ -485,7 +496,7 @@
     </div>
     <div class="profile-wrap">
     <div class="profile" role="img" aria-label="ภาพโปรไฟล์ของก้อย">
-      <img src="profile.jpg" alt="รูปแนะนำตัวของก้อย">
+      <img src="./profile.jpg" alt="รูปแนะนำตัวของก้อย">
       <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <defs>
           <linearGradient id="profileSky" x2="0" y2="1"><stop stop-color="#aee5ff"/><stop offset="1" stop-color="#fff0f7"/></linearGradient>
